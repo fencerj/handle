@@ -8,7 +8,7 @@ const { height } = useWindowSize()
 
 watchEffect(() => {
   document.documentElement.style.setProperty('--vh', `${height.value / 100}px`)
-}
+})
 </script>
 
 <template>
