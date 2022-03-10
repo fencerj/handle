@@ -8,14 +8,7 @@ const { height } = useWindowSize()
 
 watchEffect(() => {
   document.documentElement.style.setProperty('--vh', `${height.value / 100}px`)
-})
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?5269ef2b63afcfb69525a1f4c8a02429";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+}
 </script>
 
 <template>
