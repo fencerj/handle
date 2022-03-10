@@ -58,7 +58,7 @@ async function download() {
     <div ref="el" flex="~ col" items-center p="x6 y4" bg-base relative>
       <AppName />
       <div text-xs mt1 mb3 op50 ws-nowrap>
-        handle.antfu.me
+        fencerj.github.io/handle/
       </div>
 
       <WordBlocks v-for="w,i of tries" :key="i" :word="w" :revealed="true" :animate="false" />
