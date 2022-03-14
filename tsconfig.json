@@ -4,7 +4,7 @@
     "module": "esnext",
     "target": "esnext",
     "lib": ["DOM", "ESNext"],
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "incremental": false,
     "skipLibCheck": true,
