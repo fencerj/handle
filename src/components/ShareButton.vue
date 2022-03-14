@@ -4,6 +4,7 @@ import { t } from '~/i18n'
 
 function open() {
   showShareDialog.value = true
+  window._hmt.push(['_trackEvent', "sharePage", "click", "", ""]);
 }
 </script>
 
