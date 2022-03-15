@@ -33,6 +33,7 @@ onMounted(() => render())
 
 async function download() {
   saveAs(dataUrl.value, `${t('name')} ${dayNoHanzi.value}${useMask.value ? ' 遮罩' : ''}.png`)
+  window._hmt.push(['_trackEvent', 'sharePage_img_suc', 'click', '', ''])
 }
 </script>
 
