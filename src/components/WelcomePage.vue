@@ -7,6 +7,8 @@ function start() {
   showHelp.value = false
   useMask.value = false
   initialized.value = true
+  window._hmt.push(['_trackEvent', 'gamePage', 'onEnter', '', ''])
+  console.log('进入页面')
 }
 
 function variantButton() {
@@ -14,6 +16,8 @@ function variantButton() {
 }
 
 function privacyButton() {
+  window._hmt.push(['_trackEvent', 'sharePage', 'click', '', ''])
+  console.log('test')
   showPrivacyNotes.value = true
 }
 

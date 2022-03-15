@@ -11,9 +11,9 @@ const inputValue = ref('')
 const showToast = autoResetRef(false, 1000)
 const shake = autoResetRef(false, 500)
 
-const isFinishedDelay = debouncedRef(isFinished, 800)
-
 function enter() {
+  window._hmt.push(['_trackEvent', 'confimIdioms', 'click', '', ''])
+  console.log('点击确定')
   if (input.value.length !== WORD_LENGTH)
     return
   if (!checkValidIdiom(input.value, useStrictMode.value)) {

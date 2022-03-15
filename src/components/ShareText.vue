@@ -35,7 +35,7 @@ const lines = computed(() => {
     '',
     ...table,
     '',
-    'handle.antfu.me',
+    'https://fencerj.github.io/handle',
   ]
 })
 
@@ -51,6 +51,7 @@ const copied = ref(false)
 async function shareSystem() {
   if (share.isSupported && isMobile) {
     await share.share()
+    window._hmt.push(['_trackEvent', 'sharePage_txt_suc', 'click', '', ''])
     return true
   }
   return false

@@ -41,8 +41,11 @@ function congrats() {
 }
 
 watch(isPassed, (v) => {
-  if (v)
+  if (v) {
+    window._hmt.push(['_trackEvent', 'success', 'event', '', ''])
+    console.log('成功')
     setTimeout(congrats, 300)
+  }
 }, { flush: 'post' })
 </script>
 

@@ -10,7 +10,6 @@ watchEffect(() => {
   document.documentElement.style.setProperty('--vh', `${height.value / 100}px`)
 })
 </script>
-<script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
 <template>
   <main font-sans text="center gray-700 dark:gray-300" select-none :class="{ colorblind }">
     <NotTodayBanner v-if="dayNo < daySince" />
