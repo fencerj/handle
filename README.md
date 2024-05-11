@@ -36,3 +36,26 @@ A Chinese Hanzi variation of [Wordle](https://www.powerlanguage.co.uk/wordle/). 
 ## License
 
 [MIT](./LICENSE) License © 2021-PRESENT [Anthony Fu](https://github.com/antfu)
+
+flowchart TB
+    init[Initialize Variables\nMatrices Ga, h, Weight Matrix Q,\nEstimate Vector Za0]
+    calcInit[Calculate Initial Ga and h\nBased on BS and R]
+    iterStart[Start Iterative Optimization Process]
+    calcWLS[Calculate Weighted Least Squares Solution\nFunction: calculate_Za0]
+    calcRes[Calculate Residuals\nFunction: calculate_residuals]
+    updQ[Update Weight Matrix\nFunction: update_Q]
+    recalcGH[Re-calculate Ga and h\nFunction: calculate_Ga_h]
+    check[Check Convergence]
+    output[Output Final Estimated Position\nStore result in Zp]
+    freeRes[Free Resources]
+
+    init --> calcInit
+    calcInit --> iterStart
+    iterStart --> calcWLS
+    calcWLS --> calcRes
+    calcRes --> updQ
+    updQ --> recalcGH
+    recalcGH --> check
+    check -->|Not Converged| iterStart
+    check -->|Converged| output
+    output --> freeRes
